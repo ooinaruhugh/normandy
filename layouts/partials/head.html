@@ -1,0 +1,8 @@
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="{{ "css/yorha.css" | absURL }}" rel="stylesheet"></link>
+<link href="{{ "css/base.css" | absURL }}" rel="stylesheet"></link>
+<link href="{{ "css/syntax.css" | absURL }}" rel="stylesheet"></link>
+{{ if or .Params.math .Site.Params.math }}
+{{ partial "math.html" . }}
+{{ end }}
+
