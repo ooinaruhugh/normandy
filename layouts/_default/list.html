@@ -16,5 +16,10 @@
         <p><a class="readmore" href="{{ .RelPermalink }}">Weiterlesen</a></p>
     </div>
     {{ end }}
+    <div class="pagination-footer">
+<div class="border-right"><div class="delimiter"></div></div>
+<div>
 {{ template "_internal/pagination.html" . }}
+</div>
+    </div>
 {{ end }}
