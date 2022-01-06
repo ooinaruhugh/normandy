@@ -4,27 +4,15 @@
         <h1>{{ .Title }}</h1> 
         <p class="post-info">
         <small class="post-date">{{ .Date.Format "02.01.2006" }}</small>
-        {{ if (isset .Params "author") }}
+        {{ with .Params.author}}
         &#x25A0;
-        <small class="author">{{ .Param "author" }}</small>
+        <small class="author">{{ .  }}</small>
         {{ end }}
-
 
         {{ .Content }}
     </div>
     <div class="col-3 col-mobile-10 sidebar-column">
-        <h2>Tags</h2>     
-        <ul>                  
-            <li>Tag 1</li>    
-            <li>Tag 2</li>    
-            <li>Tag 3</li>
-        </ul>             
-        <figure>
-            <figcaption>Bare Fists</figcaption>
-            <div>
-                <p>Unarmed.</p>
-            </div>
-        </figure>
+        {{ partial "sidebar.html" . }}
     </div>
 </div>
 {{ end }}
