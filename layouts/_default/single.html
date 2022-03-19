@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="container">
-    <div class="col-7 col-mobile-10 post-column">
+    <article class="col-7 col-mobile-10 post-column">
         <h1>{{ .Title }}</h1> 
         <p class="post-info">
         <small class="post-date">{{ .Date.Format "02.01.2006" }}</small>
@@ -10,9 +10,9 @@
         {{ end }}
 
         {{ .Content }}
-    </div>
-    <div class="col-3 col-mobile-10 sidebar-column">
+    </article>
+    <aside class="col-3 col-mobile-10 sidebar-column">
         {{ partial "sidebar.html" . }}
-    </div>
+    </aside>
 </div>
 {{ end }}
