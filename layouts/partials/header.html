@@ -1,12 +1,15 @@
 {{ if .Site.Menus.main }}
     <div class="nav-header container col-mobile-10">
         <div class="border-right"><div class="delimiter"></div></div>
-        <div class="container button-bar">
+        <nav class="container button-bar">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
             {{/* Do something with lists and list spacing */}}
-            <a class="nav-button col-mobile-10 {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{end}}" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="nav-button col-mobile-10 {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{end}}"
+                href="{{ .URL }}">
+                {{ .Name }}
+            </a>
         {{ end }}
-        </div>
+        </nav>
     </div>
 {{ end }}
