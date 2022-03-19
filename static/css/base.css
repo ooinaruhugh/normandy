@@ -30,8 +30,17 @@ code {
     font-family: "Lucida Console", Monaco, monospace;
 }
 
+img {
+    object-fit: contain;
+    max-width: 100%;
+}
+
 ul.pagination {
+    height: 100%;
+    margin: 0;
     padding: 0;
+    text-align: center;
+    display: flex;
 }
 
 ul.pagination li,
@@ -39,8 +48,24 @@ ul.menu li {
     display: inline;
 }
 
+.page-item {
+    margin: 0 5px;
+}
+
 .page-link {
     text-decoration: none;
+    display: block;
+}
+
+.pagination-footer {
+    padding: 16px 0;
+    border: solid #454138;
+    border-width: 0.1rem 0 0 0;
+    display: flex;
+}
+
+.pagination-decoration {
+    float: left;
 }
 
 .container {
@@ -48,18 +73,16 @@ ul.menu li {
     display: flex;
 }
 
+.button-bar {
+    flex-grow: 1;
+}
 
 .nav-button {    
-    margin: 0px 10px;  
+    margin: 0px 5px;  
     padding: 0.2rem 2rem 0.2rem 0.5rem;  
     width: 4em;                      
     text-align: left;
     text-decoration: none;
-}
-
-.pagination-footer {
-    border: solid #454138;
-    border-width: 0.1rem 0 0 0;
 }
 
 .nav-header {
@@ -68,7 +91,6 @@ ul.menu li {
     padding: 0 0 10px 0;
     margin: 1rem 0;
 }
-
 
 .border-right {
     border: solid #454138;
@@ -82,7 +104,6 @@ ul.menu li {
     min-width: 0.5em;
     height: 100%;
 }
-                                      
 
 .post-info 
 /*small.post-date*/ {
@@ -90,22 +111,58 @@ ul.menu li {
     font-weight: lighter;
 }
 
-
-@media only screen and (max-width: 725px) {
-    .button-bar { width: 95%; }
-
-    .col-mobile-10 { width: 100%; }
-
-    .nav-button {
-        margin: 2.5px 5px;
-    }
-}
-
-
 @media only screen and (max-width: 800px) {
     body { margin: 0px 1em; }
 }
 
+@media only screen and (max-width: 725px) {
+    .col-mobile-10 { width: 100%; }
+
+    .nav-button {
+        margin: 2.5px 5px;
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .border-right {
+        padding: 0;
+        border: 0;
+    }
+
+    .delimiter {
+        width: 0;
+        min-width: 0;
+    }
+
+    .nav-button {
+        margin: 2.5px 0px;
+    }
+
+    li.page-item:first-child {
+        margin-left: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .page-item {
+        margin: 0;
+        border: solid #454138;
+        border-width: 0 0.05rem;
+    }
+
+    .pagination-container {
+        margin: 0 auto;
+    }
+
+    .page-item:first-child {
+        border-width: 0 0.05rem 0 0;
+    }
+
+    .page-item:last-child {
+        border-width: 0 0 0 0.05rem;
+    }
+}
 
 @media only screen and (min-width: 726px) {
     .post-column {

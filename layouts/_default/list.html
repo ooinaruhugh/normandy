@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{ range (.Paginator 2).Pages }}
+    {{ range .Paginator.Pages }}
     <div class="post">
         <h2 class="post-title">{{ .Title }}</h2>
         <p class="post-info">
@@ -13,13 +13,13 @@
 
         <p class="summary">{{ .Summary }}</p>
 
-        <p><a class="readmore" href="{{ .RelPermalink }}">Weiterlesen</a></p>
+        <p><a class="readmore" href="{{ .RelPermalink }}">Show me more</a></p>
     </div>
     {{ end }}
-    <div class="pagination-footer">
-<div class="border-right"><div class="delimiter"></div></div>
-<div>
-{{ template "_internal/pagination.html" . }}
-</div>
+    <div class="pagination-footer container">
+        <div class="border-right"><div class="delimiter"></div></div>
+        <div class="pagination-container">
+            {{ template "_internal/pagination.html" . }}
+        </div>
     </div>
 {{ end }}
