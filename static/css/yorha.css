@@ -332,7 +332,7 @@ button:not(:disabled):hover:after,
 }
 button:not(:disabled):active,
 .nav-button:active,
-.page-item:not(.disabled) > .page-link:active,
+.page-item:not(.disabled):active > .page-link:active,
 .button:active {
   color: #454138;
 }
