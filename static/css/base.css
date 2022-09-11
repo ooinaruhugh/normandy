@@ -24,10 +24,12 @@ body {
 
 pre {
     font-family: "Lucida Console", Monaco, monospace;
+    overflow: auto;
 }
 
 code {
     font-family: "Lucida Console", Monaco, monospace;
+    overflow: auto;
 }
 
 img {
@@ -90,6 +92,28 @@ ul.menu li {
     border-width: 0 0 0.1rem 0;
     padding: 0 0 10px 0;
     margin: 1rem 0;
+}
+
+.tagcloud {
+    display: inline-block;
+    background-color: #dcd8c0;
+    padding: 0.5rem;
+    vertical-align: bottom;
+    box-sizing: border-box;
+}
+
+.tagcloud-item {
+    margin: .2rem;
+    padding: .24rem;
+    white-space: nowrap;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.tagcloud-item:hover {
+    color: #dcd8c0;
+    background-color: #454138;
+    transition: all .35s ease-out;
 }
 
 .border-right {
