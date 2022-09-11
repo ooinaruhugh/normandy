@@ -14,8 +14,8 @@
     {{ end }}
 </ul>
 {{ end }}
+{{ partial "tagcloud.html" . }}
 {{ if .TableOfContents }}
 <h2>Table of Contents</h2>
 {{ .TableOfContents }}
 {{ end }}
-{{ partial "tagcloud.html" . }}
