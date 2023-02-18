@@ -161,6 +161,7 @@ select {
 input[type=submit]:not(:disabled),
 input[type=button]:not(:disabled),
 .nav-button,
+.lbl-toggle,
 .page-item > .page-link,
 input[type=reset]:not(:disabled) {
   padding: 0.5rem;
@@ -190,6 +191,7 @@ input[type=reset]:not(:disabled) {
 }
 input[type=submit]:not(:disabled):hover,
 input[type=button]:not(:disabled):hover,
+.lbl-toggle:hover,
 .nav-button:hover,
 .page-item:not(.disabled) > .page-link:hover,
 input[type=reset]:not(:disabled):hover {
@@ -199,6 +201,7 @@ input[type=reset]:not(:disabled):hover {
 input[type=submit]:not(:disabled):hover,
 input[type=button]:not(:disabled):hover,
 .nav-button:hover,
+.lbl-toggle:hover,
 .page-item:not(.disabled) > .page-link:hover,
 input[type=reset]:not(:disabled):hover {
   background-color: #454138;
@@ -207,6 +210,7 @@ input[type=reset]:not(:disabled):hover {
 input[type=submit]:not(:disabled):active,
 input[type=button]:not(:disabled):active,
 .nav-button:active,
+.lbl-toggle:active,
 input[type=reset]:not(:disabled):active {
   background-color: #dcd8c0;
   color: #454138;
@@ -234,6 +238,7 @@ button:disabled,
 button:not(:disabled),
 .button,
 .nav-button,
+.lbl-toggle,
 .page-item:not(.disabled) > .page-link {
   padding: 0.5rem;
   font-size: 1em;
@@ -265,6 +270,7 @@ button:not(:disabled),
 button:not(:disabled):hover,
 .button:hover,
 .nav-button:hover,
+.lbl-toggle:hover,
 .page-item:not(.disabled) > .page-link:hover {
   -webkit-box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1;
   box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1;
@@ -272,6 +278,7 @@ button:not(:disabled):hover,
 button:not(:disabled):before,
 .button:before,
 .nav-button:before, 
+.lbl-toggle:before,
 .page-item:not(.disabled) > .page-link:before {
   content: '';
   -webkit-transition: all 0.2s;
@@ -288,6 +295,7 @@ button:not(:disabled):before,
 button:not(:disabled):after,
 .button:after,
 .nav-button:after,
+.lbl-toggle:after,
 .page-item:not(.disabled) > .page-link:after {
   content: '';
   -webkit-transition: all 0.2s;
@@ -318,6 +326,7 @@ button:not(:disabled):hover,
 button:not(:disabled):hover:before,
 .button:hover:before,
 .nav-button:hover:before,
+.lbl-toggle:hover:before,
 .page-item:not(.disabled) > .page-link:hover:before {
   top: -0.2rem;
   bottom: -0.2rem;
@@ -327,17 +336,20 @@ button:not(:disabled):hover:before,
 button:not(:disabled):hover:after,
 .button:hover:after,
 .nav-button:hover:after,
+.lbl-toggle:hover:after,
 .page-item:not(.disabled) > .page-link:hover:after {
   width: 100%;
 }
 button:not(:disabled):active,
 .nav-button:active,
+.lbl-toggle:active,
 .page-item:not(.disabled):active > .page-link:active,
 .button:active {
   color: #454138;
 }
 button:not(:disabled):active:after,
 .nav-button:active:after,
+.lbl-toggle:active:after,
 .page-item:not(.disabled) > .page-link:active:after,
 .button:active:after {
   background-color: #dcd8c0;
@@ -389,6 +401,7 @@ figure > figcaption {
 iframe {
   border: 0.1rem solid #bab5a1;
 }
+.toggle:checked + .lbl-toggle,
 .page-item.active > .page-link {
   background-color: #454138;
   color: #dcd8c0;
@@ -398,6 +411,7 @@ iframe {
   -ms-transition-property: box-shadow;
   transition-property: box-shadow;
 }
+.toggle:checked + .lbl-toggle:after,
 .page-item.active > .page-link:after {
   background-color: #454138;
 }

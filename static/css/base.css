@@ -142,11 +142,20 @@ ul.menu li {
     font-weight: lighter;
 }
 
+.large-screen-only,
+.mobile-only {
+    display: none;
+}
+
 @media only screen and (max-width: 800px) {
     body { margin: 0px 1em; }
 }
 
 @media only screen and (max-width: 725px) {
+    .mobile-only {
+        display: block;
+    }
+    
     .col-mobile-10 { width: 100%; }
 
     .nav-button {
@@ -196,6 +205,10 @@ ul.menu li {
 }
 
 @media only screen and (min-width: 726px) {
+    .large-screen-only {
+        display: block;
+    }
+    
     .post-column {
         padding: 0 10px 0 0;
     }

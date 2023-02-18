@@ -1,5 +1,7 @@
 {{ partial "tagcloud.html" . }}
 {{ if .TableOfContents }}
+<div class="large-screen-only">
 <h2>Table of Contents</h2>
 {{ .TableOfContents }}
+</div>
 {{ end }}

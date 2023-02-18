@@ -1,0 +1,32 @@
+input[type='checkbox'].toggle {
+    display: none;
+}
+
+.lbl-toggle {
+    display: block;
+
+    text-transform: uppercase;
+    text-align: center;
+    
+    cursor: pointer;
+
+    /* transition: all 0.25s ease-out; */
+}
+
+.collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+  
+    transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: 100vh;
+
+    background-color: #dcd8c0;
+
+    border: solid #bcb59d;
+    border-width: 0 0 0.1rem 0;
+    padding: 0 0 10px 0;
+    margin: 0 0 1rem 0;
+}
