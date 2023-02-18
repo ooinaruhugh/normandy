@@ -13,14 +13,6 @@
         <small><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></small>
             {{ end }}
         {{ end }}
-        {{ if false }}
-        {{ if isset .Params "categories" }}
-        &#x25A0;
-            {{ range (.GetTerms "categories") }}
-        <small><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></small>
-            {{ end }}
-        {{ end }}
-        {{ end }}
 
         {{ .Content }}
     </article>
