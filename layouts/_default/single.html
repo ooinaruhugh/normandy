@@ -7,6 +7,20 @@
         &#x25A0;
         <small class="author">{{ . }}</small>
         {{ end }}
+        {{ if isset .Params "tags" }}
+        &#x25A0;
+            {{ range (.GetTerms "tags") }}
+        <small><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></small>
+            {{ end }}
+        {{ end }}
+        {{ if false }}
+        {{ if isset .Params "categories" }}
+        &#x25A0;
+            {{ range (.GetTerms "categories") }}
+        <small><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></small>
+            {{ end }}
+        {{ end }}
+        {{ end }}
 
         {{ .Content }}
     </article>

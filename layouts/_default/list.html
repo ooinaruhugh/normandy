@@ -9,6 +9,12 @@
         &#x25A0;
         <small class="author">{{ .Param "author" }}</small>
         {{ end }}
+        {{ if isset .Params "tags" }}
+        &#x25A0;
+        {{ range (.GetTerms "tags") }}
+        <small><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></small>
+        {{ end }}
+        {{ end }}
         </p>
 
 

@@ -123,6 +123,12 @@ ul.menu li {
     border-width: 0 0.1rem 0 0;
 }
 
+.border-up {
+    border: solid #454138;
+    padding: 0.2em 0 0 0;
+    border-width: 0.1rem 0 0 0;
+}
+
 .delimiter {
     background: #454138;
     width: 0.5em;
