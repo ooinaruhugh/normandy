@@ -1,6 +1,6 @@
 <figure>
     <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
-    {{ with .Title }}
+    {{- with .Title -}}
     <figcaption>{{ . }}</figcaption>
-    {{ end }}
+    {{- end -}}
 </figure>

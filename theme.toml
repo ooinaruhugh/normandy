@@ -1,8 +1,8 @@
 name = "Normandy"
 license = "MIT"
-licenselink = "https://github.com/ooinaruhugh/normandy/blob/master/LICENSE"
+licenselink = "https://github.com/ooinaruhugh/normandy/blob/main/LICENSE"
 description = ""
-homepage = "http://kafe.dev/"
+homepage = "https://github.com/ooinaruhugh/normandy"
 tags = []
 features = []
 min_version = "0.41.0"

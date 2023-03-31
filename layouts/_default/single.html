@@ -1,9 +1,9 @@
-{{ define "main" }}
+{{- define "main" -}}
     <article class="col-7 col-mobile-10 post-column">
         <h1>{{ .Title }}</h1> 
         <p class="post-info">
         <small class="post-date">{{ .Date.Format "02.01.2006" }}</small>
-        {{ with .Params.author}}
+        {{ with .Params.author }}
         &#x25A0;
         <small class="author">{{ . }}</small>
         {{ end }}
@@ -12,7 +12,7 @@
             {{ range (.GetTerms "tags") }}
         <small><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></small>
             {{ end }}
-        {{ end }}
+        {{- end -}}
 
         <div class="mobile-only">
             <input id="mobile-toc" class="toggle" type="checkbox">
@@ -25,6 +25,6 @@
         {{ .Content }}
     </article>
     <aside class="col-3 col-mobile-10 sidebar-column">
-        {{ partial "sidebar.html" . }}
+        {{- partial "sidebar.html" . -}}
     </aside>
 {{ end }}

@@ -4,7 +4,7 @@
 <link href="{{ "css/collapsible.css" | absURL }}" rel="stylesheet"></link>
 <link href="{{ "css/syntax.css" | absURL }}" rel="stylesheet"></link>
 <title>{{ if .Title }}{{ .Title }} - {{ end }} {{ .Site.Title }}</title>
-{{ if or .Params.math .Site.Params.math }}
-{{ partial "math.html" . }}
-{{ end }}
+{{- if or .Params.math .Site.Params.math -}}
+{{- partial "math.html" . -}}
+{{- end -}}
 
