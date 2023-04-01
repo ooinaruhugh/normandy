@@ -341,6 +341,7 @@ button:not(:disabled):after,
 button:not(:disabled):hover,
 .button:hover,
 .nav-button:hover,
+.lbl-toggle:hover,
 .page-item:not(.disabled):not(.active) > .page-link:hover {
   background-color: transparent;
   color: #dcd8c0;
@@ -424,6 +425,7 @@ iframe {
   border: 0.1rem solid #bab5a1;
 }
 .toggle:checked + .lbl-toggle,
+.nav-button.active,
 .page-item.active > .page-link {
   background-color: #454138;
   color: #dcd8c0;
@@ -434,6 +436,7 @@ iframe {
   transition-property: box-shadow;
 }
 .toggle:checked + .lbl-toggle:after,
+.nav-button.active:after,
 .page-item.active > .page-link:after {
   background-color: #454138;
 }
