@@ -7,11 +7,11 @@
         <p class="post-info">
         <small class="post-date">{{ .Date.Format "02.01.2006" }}</small>
         {{- if (isset .Params "author") }}
-        &#x25A0;
+        <span aria-hidden="true">&#x25A0;</span>
         <small class="author">{{ .Param "author" }}</small>
         {{ end -}}
         {{- if isset .Params "tags" }}
-        &#x25A0;
+        <span aria-hidden="true">&#x25A0;</span>
             {{- range (.GetTerms "tags") }}
         <small><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></small>
             {{ end -}}
@@ -22,7 +22,7 @@
     </article>
     {{ end }}
     <div class="pagination-footer container">
-        <div class="border-right"><div class="delimiter"></div></div>
+        <div class="border-right" aria-hidden="true"><div class="delimiter" aria-hidden="true"></div></div>
         <div class="pagination-container">
             {{- template "_internal/pagination.html" . -}}
         </div>
