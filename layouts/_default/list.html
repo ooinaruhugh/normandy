@@ -1,5 +1,6 @@
 {{- define "main" -}}
     <div class="col-7 col-mobile-10 post-column">
+    <h1>{{ .Title }}</h1> 
     {{- range (.Paginator 1).Pages -}}
     <article class="post">
         <h2 class="post-title">{{ .Title }}</h2>
