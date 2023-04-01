@@ -1,0 +1,13 @@
+<p class="post-info">
+<span class="post-date">{{ .Date.Format "02.01.2006" }}</span>
+{{- if (isset .Params "author") }}
+<span aria-hidden="true">&#x25A0;</span>
+<span class="author">{{ .Param "author" }}</span>
+{{ end -}}
+{{- if isset .Params "tags" }}
+<span aria-hidden="true">&#x25A0;</span>
+    {{- range (.GetTerms "tags") }}
+<a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+    {{ end -}}
+{{- end -}}
+</p>

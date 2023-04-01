@@ -1,19 +1,7 @@
 {{- define "main" -}}
     <article class="col-7 col-mobile-10 post-column">
         <h1>{{ .Title }}</h1> 
-        <p class="post-info">
-        <small class="post-date">{{ .Date.Format "02.01.2006" }}</small>
-        {{ with .Params.author }}
-        <span aria-hidden="true">&#x25A0;</span>
-        <small class="author">{{ . }}</small>
-        {{ end }}
-        {{ if isset .Params "tags" }}
-        <span aria-hidden="true">&#x25A0;</span>
-            {{ range (.GetTerms "tags") }}
-        <small><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></small>
-            {{ end }}
-        {{- end -}}
-
+        {{ partial "post-info.html" . }}
         <div class="mobile-only">
             <input id="mobile-toc" class="toggle" type="checkbox">
             <label for="mobile-toc" class="lbl-toggle">Table of Contents</label>
