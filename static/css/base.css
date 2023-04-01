@@ -141,6 +141,10 @@ ul.menu li {
     height: 100%;
 }
 
+.float-right {
+    float: right!important;
+}
+
 .post-info 
 /*small.post-date*/ {
     /* font-size: 0.67em; */
