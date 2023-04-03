@@ -92,11 +92,16 @@ ul.menu li {
     text-decoration: none;
 }
 
-.nav-header {
+header.nav {
     border: solid #454138;
     border-width: 0 0 0.1rem 0;
     padding: 0 0 10px 0;
     margin: 1rem 0;
+}
+
+footer.main {
+    margin-top: 1em;
+    padding: 1em 0;
 }
 
 .tagcloud {
@@ -157,7 +162,7 @@ ul.menu li {
     display: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: calc(800px + 2 * 1em)) { /* this actually needs to be sth like 800px + 2 * 1em... */
     body { margin: 0px 1em; }
 }
 
