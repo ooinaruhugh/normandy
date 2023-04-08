@@ -1,8 +1,10 @@
 {{- define "main" -}}
     <article class="col-10">
+        {{- if .Site.Params.profilePic }}
         <figure class="float-right profile col-3 col-mobile-10">
-            <img src="{{ .Site.Params.profilePic | safeURL }}" alt="">
+            <img src="{{ .Site.Params.profilePic | safeURL }}" alt="{{ .Site.Params.profilePicAltText }}">
         </figure>
+        {{- end -}}
         {{ .Content }}
     </article>
 {{- end -}}
