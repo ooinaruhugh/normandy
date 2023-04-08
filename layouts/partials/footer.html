@@ -1,22 +1,8 @@
 <footer class="main border-up container">
     <div class="col-4 col-mobile-10 mobile-padding">
-        <label style="margin-top: 0;">contact me at:</label>
-        <br/>
-        <address>{{ .Site.Params.displayEmailAddress }}</address>
-        <label>address: </label>
-        <address>
-            {{ print (replace .Site.Params.address ", " "<br/>") | safeHTML}}
-        </address>
     </div>
     <div class="col-3 col-mobile-10 mobile-padding">
-        
     </div>
     <div class="col-3 col-mobile-10 mobile-padding">
-        also on:
-        <ul class="social-media-list">
-            {{- range $index, $element := (index .Site.Data "socialMedia").links }}
-            <li>{{ $index }}: {{ $element }}</li>
-            {{ end -}}
-        </ul>
     </div>
 </footer>

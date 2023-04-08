@@ -42,6 +42,15 @@ img {
     max-width: 100%;
 }
 
+ul, ol, dl, dd {
+    padding: 0;
+    margin-left: 30px;
+}
+
+ul li, ol li {
+    line-height: 150%; 
+}
+
 ul.pagination {
     height: 100%;
     margin: 0;
@@ -160,6 +169,21 @@ footer.main {
 .large-screen-only,
 .mobile-only {
     display: none;
+}
+
+.icon > svg,
+.icon > img {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
 }
 
 @media only screen and (max-width: calc(800px + 2 * 1em)) { /* this actually needs to be sth like 800px + 2 * 1em... */
