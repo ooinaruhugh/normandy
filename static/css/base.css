@@ -179,6 +179,17 @@ footer.main {
     vertical-align: middle;
 }
 
+.event-list,
+.post-list {
+    list-style: none;
+}
+
+span.list-item-date {
+    min-width: 100px;
+    display: inline-block;
+    text-align: right;
+}
+
 .social-media-list {
     list-style: none;
     margin-left: 0;
