@@ -25,6 +25,7 @@ html {
 body {
     max-width: 800px;
     margin: auto;
+    padding-top: 1rem;
 }
 
 pre {
@@ -105,7 +106,7 @@ header.nav {
     border: solid #454138;
     border-width: 0 0 0.1rem 0;
     padding: 0 0 10px 0;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 
 footer.main {
