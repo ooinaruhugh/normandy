@@ -156,6 +156,7 @@ footer.main {
 }
 
 .float-right {
+    margin-left: 1em;
     float: right!important;
 }
 
