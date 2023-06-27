@@ -1,3 +1,4 @@
+{{- $sidebar := default true (.Get "sidebar") -}}
 {{- define "main" -}}
     <article class="col-7 col-mobile-10 post-column">
         <h1>{{ .Title }}</h1> 
@@ -12,7 +13,9 @@
 
         {{ .Content }}
     </article>
+    {{- if $sidebar -}}
     <aside class="col-3 col-mobile-10 sidebar-column">
         {{- partial "sidebar.html" . -}}
     </aside>
+    {{- end -}}
 {{ end }}
