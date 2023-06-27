@@ -168,6 +168,12 @@ footer.main {
     font-weight: lighter;
 }
 
+iframe.embedded {
+    width: 100%;
+    border: none;
+    overflow: hidden;
+}
+
 .large-screen-only,
 .mobile-only {
     display: none;
