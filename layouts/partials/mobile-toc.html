@@ -1,0 +1,9 @@
+{{- if (and .TableOfContents (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>")) -}}
+        <div class="mobile-only">
+            <input id="mobile-toc" class="toggle" type="checkbox">
+            <label for="mobile-toc" class="lbl-toggle">Table of Contents</label>
+            <div class="collapsible-content">
+                {{ .TableOfContents }}
+            </div>
+        </div>
+{{- end -}}
