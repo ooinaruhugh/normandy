@@ -1,0 +1,15 @@
+{{- define "main" -}}
+    <article class="col-10 col-mobile-10 post-column">
+        <h1>{{ .Title }}</h1> 
+        {{ partial "post-info.html" . }}
+        <div class="mobile-only">
+            <input id="mobile-toc" class="toggle" type="checkbox">
+            <label for="mobile-toc" class="lbl-toggle">Table of Contents</label>
+            <div class="collapsible-content">
+                {{ .TableOfContents }}
+            </div>
+        </div>
+
+        {{ .Content }}
+    </article>
+{{ end }}
