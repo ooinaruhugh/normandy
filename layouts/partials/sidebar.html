@@ -1,5 +1,5 @@
 {{- partial "tagcloud.html" . -}}
-{{- if .TableOfContents -}}
+{{- if (and .TableOfContents (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>")) -}}
 <div class="large-screen-only">
     <h2>Table of Contents</h2>
     {{- .TableOfContents -}}
