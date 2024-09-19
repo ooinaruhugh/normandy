@@ -1,7 +1,7 @@
 name = "Normandy"
 license = "MIT"
 licenselink = "https://github.com/ooinaruhugh/normandy/blob/main/LICENSE"
-description = ""
+description = "A YoRHa-inspired theme for Hugp"
 homepage = "https://github.com/ooinaruhugh/normandy"
 tags = []
 features = []
