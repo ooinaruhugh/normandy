@@ -1,9 +1,14 @@
-{{- $dataName := default "posts" (.Get "eventData") -}}
-{{- $amount   := default 5 (.Get "amount") -}}
+{{- $dataName       := default "posts" (.Get "section") -}}
+{{- $amount         := default 5 (.Get "amount") -}}
+{{- $bulletPoints   := default false (.Get "bulletPoints") -}}
+{{- if $bulletPoints -}}
+<ul>
+{{- else -}}
 <ul class="post-list">
+{{- end -}}
 {{- range ( where site.RegularPages "Section" $dataName | first $amount ) }}
     <li>
-        <span class="list-item-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        <span class="list-item-date">{{ .Date.Format "Jan 2, 2006" }}:</span>
         <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
     </li>
 {{- end }}
