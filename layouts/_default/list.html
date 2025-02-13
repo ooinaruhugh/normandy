@@ -6,7 +6,9 @@
         <h2 class="post-title">{{ .Title }}</h2>
         {{ partial "post-info.html" . }}
         <p class="summary">{{ .Summary }}</p>
+        {{- if .Truncated -}}
         <p><a class="readmore" href="{{ .RelPermalink }}">More of this</a></p>
+        {{- end -}}
     </article>
     {{ end }}
     <div class="pagination-footer container">
