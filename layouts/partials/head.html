@@ -10,3 +10,6 @@
 {{- if or .Params.math .Site.Params.math -}}
 {{- partial "math.html" . -}}
 {{- end -}}
+{{- if or .Params.pdf .Site.Params.pdf -}}
+{{- partial "pdf.html" . -}}
+{{- end -}}
