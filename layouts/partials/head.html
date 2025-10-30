@@ -7,6 +7,9 @@
 <link href="{{ "css/collapsible.css" | absURL }}" rel="stylesheet">
 <link href="{{ "css/syntax.css" | absURL }}" rel="stylesheet">
 <title>{{ if .Title }}{{ .Title }} - {{ end }} {{ .Site.Title }}</title>
+{{ with (eq (.Site.Param "favicon") "png") -}}
+<link rel="icon" type="image/png" href="{{ "favicon.png" | absURL }}">
+{{- end -}}
 {{- if or .Params.math .Site.Params.math -}}
 {{- partial "math.html" . -}}
 {{- end -}}
